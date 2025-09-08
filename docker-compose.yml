@@ -2,6 +2,9 @@ services:
   broker:
     image: apache/kafka:latest
     container_name: broker
+    ports:
+      - "9092:9092"
+      - "9093:9093"
     environment:
       KAFKA_NODE_ID: 1
       KAFKA_PROCESS_ROLES: broker,controller
