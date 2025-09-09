@@ -3,10 +3,13 @@ package com.renato.wit_challenge;
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.ArgumentMatchers.eq;
 import static org.mockito.Mockito.doNothing;
+import static org.mockito.Mockito.when;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.header;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
+
+import java.math.BigDecimal;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,8 +26,14 @@ public class restTest {
     @MockitoBean
     private KafkaProducer kafkaProducer;
 
+    @MockitoBean
+    private calculator calculator;
+
     @Test
     void testSum() throws Exception {
+        when(calculator.sum(new BigDecimal("5"), new BigDecimal("3")))
+            .thenReturn(new BigDecimal("8"));
+        
         doNothing().when(kafkaProducer).sendMessage(eq("result"), any(String.class));
 
         mockMvc.perform(get("/sum")
@@ -37,6 +46,9 @@ public class restTest {
 
     @Test
     void testSubtract() throws Exception {
+        when(calculator.subtract(new BigDecimal("10"), new BigDecimal("4")))
+            .thenReturn(new BigDecimal("6"));
+        
         doNothing().when(kafkaProducer).sendMessage(eq("result"), any(String.class));
 
         mockMvc.perform(get("/subtract")
@@ -49,6 +61,9 @@ public class restTest {
 
     @Test
     void testMultiply() throws Exception {
+        when(calculator.multiply(new BigDecimal("6"), new BigDecimal("7")))
+            .thenReturn(new BigDecimal("42"));
+        
         doNothing().when(kafkaProducer).sendMessage(eq("result"), any(String.class));
 
         mockMvc.perform(get("/multiply")
@@ -61,6 +76,9 @@ public class restTest {
 
     @Test
     void testDivide() throws Exception {
+        when(calculator.divide(new BigDecimal("15"), new BigDecimal("3")))
+            .thenReturn(new BigDecimal("5"));
+        
         doNothing().when(kafkaProducer).sendMessage(eq("result"), any(String.class));
 
         mockMvc.perform(get("/divide")

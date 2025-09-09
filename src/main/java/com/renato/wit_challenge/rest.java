@@ -21,8 +21,10 @@ public class rest {
     @Autowired
     private KafkaProducer kafkaProducer;
 
-    //Calculator object to perform the calculations
-    private calculator calculator = new calculator();
+    //Calculator object to perform the calculations~
+    @Autowired
+    private calculator calculator;
+    
 
     private static final Logger logger = LoggerFactory.getLogger(rest.class);
 
@@ -31,8 +33,8 @@ public class rest {
     @GetMapping(value = "/sum", produces = "application/json")
     public String sum(@RequestParam BigDecimal a, @RequestParam BigDecimal b) {
         logger.info("Received sum request: a={}, b={}", a, b);
-        try {
 
+        try {
             BigDecimal result = calculator.sum(a, b);
             kafkaProducer.sendMessage("result", result.toString());
             logger.info("Sum operation completed successfully. Result: {}", result);

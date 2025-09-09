@@ -2,6 +2,7 @@ package com.renato.wit_challenge;
 import java.math.BigDecimal;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.stereotype.Service;
 
 /**
  * Class for calculator operations.
@@ -9,6 +10,7 @@ import org.slf4j.LoggerFactory;
  * @author Renato
  */
 
+@Service
 public class calculator {
 
     private static final Logger logger = LoggerFactory.getLogger(calculator.class);
