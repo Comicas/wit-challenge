@@ -26,7 +26,6 @@ A **Spring Boot** REST API that provides basic calculator operations with **Kafk
 Before running the project, ensure you have:
 
 - **Java 21+** installed
-- **Maven** installed
 - **Docker** and **Docker Compose** installed
 
 
