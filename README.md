@@ -40,8 +40,8 @@ cd wit-challenge
 
 ### 2. Build with Maven
 
+Clean and build the complete project
 ```bash
-# Clean and build the complete project
 ./mvnw clean install
 ```
 
@@ -49,18 +49,19 @@ cd wit-challenge
 
 ### 1. Start Kafka Infrastructure
 
+Start Kafka broker in detached mode
 ```bash
-# Start Kafka broker in detached mode
 docker-compose up -d
+```
 
-# Verify Kafka is running
+Verify Kafka is running
+```bash
 docker ps
 ```
 
 ### 2. Start the Spring Boot Application
-
+Using Maven wrapper
 ```bash
-# Using Maven wrapper
 ./mvnw spring-boot:run
 ```
 
@@ -96,6 +97,8 @@ You can use `curl -v` to see detailed response information including headers
 
 ```bash
 curl "http://localhost:8080/sum?a=5&b=3"
+```
+```bash
 curl -v "http://localhost:8080/sum?a=5&b=3"
 ```
 
