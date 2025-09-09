@@ -1,0 +1,30 @@
+2025-09-09 16:30:10.481 [main] INFO  [N/A] com.renato.wit_challenge.restTest - Starting restTest using Java 22.0.2 with PID 23152 (started by Administrator in C:\Users\Administrator\Downloads\wit-challenge)
+2025-09-09 16:30:10.483 [main] DEBUG [N/A] com.renato.wit_challenge.restTest - Running with Spring Boot v3.5.5, Spring v6.2.10
+2025-09-09 16:30:10.485 [main] INFO  [N/A] com.renato.wit_challenge.restTest - No active profile set, falling back to 1 default profile: "default"
+2025-09-09 16:30:12.904 [main] INFO  [N/A] o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2025-09-09 16:30:12.904 [main] INFO  [N/A] o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+2025-09-09 16:30:12.906 [main] INFO  [N/A] o.s.t.w.s.TestDispatcherServlet - Completed initialization in 0 ms
+2025-09-09 16:30:12.961 [main] INFO  [N/A] com.renato.wit_challenge.restTest - Started restTest in 3.217 seconds (process running for 4.634)
+2025-09-09 16:30:13.112 [main] INFO  [4e481ed9-07ba-4730-9702-1db01d5e2681] com.renato.wit_challenge.requestID - Generated Request-ID for GET /sum
+2025-09-09 16:30:13.217 [main] INFO  [4e481ed9-07ba-4730-9702-1db01d5e2681] com.renato.wit_challenge.rest - Received sum request: a=5, b=3
+2025-09-09 16:30:13.221 [main] INFO  [4e481ed9-07ba-4730-9702-1db01d5e2681] com.renato.wit_challenge.rest - Sum operation completed successfully. Result: 8
+2025-09-09 16:30:13.291 [main] INFO  [1e20bff8-e202-416e-b1ff-9f9ff222c2cc] com.renato.wit_challenge.requestID - Generated Request-ID for GET /subtract
+2025-09-09 16:30:13.293 [main] INFO  [1e20bff8-e202-416e-b1ff-9f9ff222c2cc] com.renato.wit_challenge.rest - Received subtract request: a=10, b=4
+2025-09-09 16:30:13.293 [main] INFO  [1e20bff8-e202-416e-b1ff-9f9ff222c2cc] com.renato.wit_challenge.rest - Subtract operation completed successfully. Result: 6
+2025-09-09 16:30:13.302 [main] INFO  [5c65b55c-7aa0-406f-8cba-c6ba9c6818e8] com.renato.wit_challenge.requestID - Generated Request-ID for GET /sum
+2025-09-09 16:30:13.319 [main] WARN  [5c65b55c-7aa0-406f-8cba-c6ba9c6818e8] o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Method parameter 'a': Failed to convert value of type 'java.lang.String' to required type 'java.math.BigDecimal'; Character i is neither a decimal digit number, decimal point, nor "e" notation exponential mark.]
+2025-09-09 16:30:13.329 [main] INFO  [be92bf4c-3906-4422-8c76-4418f925dd74] com.renato.wit_challenge.requestID - Generated Request-ID for GET /divide
+2025-09-09 16:30:13.330 [main] INFO  [be92bf4c-3906-4422-8c76-4418f925dd74] com.renato.wit_challenge.rest - Received divide request: a=15, b=3
+2025-09-09 16:30:13.333 [main] INFO  [be92bf4c-3906-4422-8c76-4418f925dd74] com.renato.wit_challenge.rest - Divide operation completed successfully. Result: 5
+2025-09-09 16:30:13.341 [main] INFO  [4eaaef6f-1562-4252-8a7d-56a583de9b0b] com.renato.wit_challenge.requestID - Generated Request-ID for GET /multiply
+2025-09-09 16:30:13.343 [main] INFO  [4eaaef6f-1562-4252-8a7d-56a583de9b0b] com.renato.wit_challenge.rest - Received multiply request: a=6, b=7
+2025-09-09 16:30:13.344 [main] INFO  [4eaaef6f-1562-4252-8a7d-56a583de9b0b] com.renato.wit_challenge.rest - Multiply operation completed successfully. Result: 42
+2025-09-09 16:30:13.358 [main] INFO  [N/A] o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.renato.wit_challenge.WitChallengeApplicationTests]: WitChallengeApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-09-09 16:30:13.362 [main] INFO  [N/A] o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.renato.wit_challenge.WitChallengeApplication for test class com.renato.wit_challenge.WitChallengeApplicationTests
+2025-09-09 16:30:13.371 [main] INFO  [N/A] o.s.b.d.r.RestartApplicationListener - Restart disabled due to context in which it is running
+2025-09-09 16:30:13.425 [main] INFO  [N/A] c.r.w.WitChallengeApplicationTests - Starting WitChallengeApplicationTests using Java 22.0.2 with PID 23152 (started by Administrator in C:\Users\Administrator\Downloads\wit-challenge)
+2025-09-09 16:30:13.425 [main] DEBUG [N/A] c.r.w.WitChallengeApplicationTests - Running with Spring Boot v3.5.5, Spring v6.2.10
+2025-09-09 16:30:13.425 [main] INFO  [N/A] c.r.w.WitChallengeApplicationTests - No active profile set, falling back to 1 default profile: "default"
+2025-09-09 16:30:14.071 [main] INFO  [N/A] c.renato.wit_challenge.KafkaProducer - KafkaProducer initialized successfully
+2025-09-09 16:30:14.963 [main] INFO  [N/A] c.r.w.WitChallengeApplicationTests - Started WitChallengeApplicationTests in 1.593 seconds (process running for 6.636)
+2025-09-09 16:30:15.493 [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] INFO  [N/A] o.s.k.l.KafkaMessageListenerContainer - test-group: Consumer stopped

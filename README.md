@@ -21,7 +21,7 @@ A **Spring Boot** REST API that provides basic calculator operations with **Kafk
 - **`requestID.java`** - Filter for request tracking and MDC propagation
 
 
-## 🔧 Prerequisites
+## Prerequisites
 
 Before running the project, ensure you have:
 
@@ -30,7 +30,7 @@ Before running the project, ensure you have:
 - **Docker** and **Docker Compose** installed
 
 
-## 🔨 Building the Project
+## Building the Project
 
 ### 1. Clone the Repository
 
@@ -44,8 +44,9 @@ cd wit-challenge
 ```bash
 # Clean and build the complete project
 ./mvnw clean install
+```
 
-## 🚀 Running the Project
+## Running the Project
 
 ### 1. Start Kafka Infrastructure
 
@@ -57,14 +58,11 @@ docker-compose up -d
 docker ps
 ```
 
-**Note:** Wait 10-15 seconds for Kafka to fully initialize before starting the application.
-
 ### 2. Start the Spring Boot Application
 
 ```bash
 # Using Maven wrapper
 ./mvnw spring-boot:run
-
 ```
 
 
@@ -80,7 +78,7 @@ INFO  c.r.w.KafkaProducer - KafkaProducer initialized successfully
 ```
 
 
-## 📡 API Usage
+## API Usage
 
 ### Available Endpoints
 
@@ -93,10 +91,13 @@ INFO  c.r.w.KafkaProducer - KafkaProducer initialized successfully
 
 ### Example Requests
 
+You can use `curl -v` to see detailed response information including headers
+
 **Addition:**
 
 ```bash
 curl "http://localhost:8080/sum?a=5&b=3"
+curl -v "http://localhost:8080/sum?a=5&b=3"
 ```
 
 ```json
@@ -124,7 +125,7 @@ X-Request-ID: f47ac10b-58cc-4372-a567-0e02b2c3d479
 ```
 
 
-## 🧪 Testing
+## Testing
 
 ### Run All Tests
 
@@ -166,14 +167,22 @@ curl "http://localhost:8080/sum?a=invalid&b=5"
 2025-09-09 14:07:15.126 [http-nio-8080-exec-1] INFO [f47ac10b-58cc] c.r.w.KafkaProducer - Message sent successfully to topic 'result': 8
 ```
 
-## 🛠 Troubleshooting
+## Troubleshooting
 
 ### Common Issues
 
 **1. Kafka Connection Error**
 
 ```
+[2025-09-09 15:27:29,674] INFO [BrokerLifecycleManager id=1] Unable to register broker 1 because the controller returned error DUPLICATE_BROKER_REGISTRATION (kafka.server.BrokerLifecycleManager)
+```
+while Kafka is opening in Docker app
+
+and
+
+```
 WARN NetworkClient - Connection to node -1 could not be established
 ```
+while starting spring-boot app
 
 **Solution:** Wait 10-15 seconds for Kafka to fully start before launching the application.
