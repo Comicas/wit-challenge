@@ -147,6 +147,8 @@ The project includes comprehensive tests for:
 
 ### Sample Log Output
 
+Complete log in /wit-challenge/logs
+
 ```log
 2025-09-09 14:07:15.123 [http-nio-8080-exec-1] INFO [f47ac10b-58cc] c.r.w.requestID - Generated Request-ID for GET /sum
 2025-09-09 14:07:15.124 [http-nio-8080-exec-1] INFO [f47ac10b-58cc] c.r.w.rest - Received sum request: a=5, b=3
