@@ -143,21 +143,6 @@ The project includes comprehensive tests for:
 - **Mock Testing** - Kafka producer mocking
 
 
-### Manual Testing
-
-```bash
-# Test all operations
-curl "http://localhost:8080/sum?a=1.5&b=2.5"
-curl "http://localhost:8080/subtract?a=10&b=4"
-curl "http://localhost:8080/multiply?a=6&b=7"
-curl "http://localhost:8080/divide?a=15&b=3"
-
-# Test error cases
-curl "http://localhost:8080/divide?a=10&b=0"
-curl "http://localhost:8080/sum?a=invalid&b=5"
-```
-
-
 ### Sample Log Output
 
 ```log
