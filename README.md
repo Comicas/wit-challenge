@@ -1,8 +1,6 @@
-<img src="https://r2cdn.perplexity.ai/pplx-full-logo-primary-dark%402x.png" style="height:64px;margin-right:32px"/>
-
 # WIT Challenge - Calculator REST API
 
-A **Spring Boot** REST API that provides basic calculator operations with **Kafka** integration, comprehensive logging, and advanced request tracing capabilities.
+A **Spring Boot** REST API that provides basic calculator operations with **Kafka** integration, logging, and request tracing capabilities.
 
 ## 📋 Table of Contents
 
@@ -179,28 +177,3 @@ WARN NetworkClient - Connection to node -1 could not be established
 ```
 
 **Solution:** Wait 10-15 seconds for Kafka to fully start before launching the application.
-
-<span style="display:none">[^1][^10][^2][^3][^4][^5][^6][^7][^8][^9]</span>
-
-<div style="text-align: center">⁂</div>
-
-[^1]: requestID.java
-
-[^2]: calculator.java
-
-[^3]: rest.java
-
-[^4]: KafkaProducer.java
-
-[^5]: KafkaConsumer.java
-
-[^6]: WitChallengeApplication.java
-
-[^7]: logback-spring.xml
-
-[^8]: application.properties
-
-[^9]: docker-compose.yml
-
-[^10]: pom.xml
-
